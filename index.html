@@ -1,65 +1,339 @@
-# Privacy Policy — ReClip
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — ReClip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF9;
+            --surface: #FFFFFF;
+            --text: #1C1917;
+            --text-secondary: #57534E;
+            --accent: #2563EB;
+            --border: #E7E5E4;
+            --highlight: #EFF6FF;
+        }
 
-**Effective Date:** February 10, 2026
-**Last Updated:** February 10, 2026
-**Developer:** RafalTech
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0C0A09;
+                --surface: #1C1917;
+                --text: #FAFAF9;
+                --text-secondary: #A8A29E;
+                --accent: #60A5FA;
+                --border: #292524;
+                --highlight: #172554;
+            }
+        }
 
----
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-## Overview
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-ReClip ("the App") is a clipboard history manager for macOS developed by RafalTech. Your privacy is fundamental to how ReClip is built. The App is designed to operate entirely on your device with no data ever leaving your Mac.
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
 
-## Data Collection
+        .header {
+            margin-bottom: 56px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
 
-**ReClip does not collect, transmit, or share any personal data.** Specifically:
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px 16px 8px 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
 
-- No personal information is collected
-- No usage analytics or telemetry is gathered
-- No crash reports are sent
-- No advertising identifiers are used
-- No cookies or tracking technologies are employed
-- No user accounts or registration is required
+        .app-badge .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
 
-## Data Storage
+        h1 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
 
-All clipboard history captured by ReClip is stored locally on your Mac using Apple's SwiftData framework. This data resides exclusively on your device and is never transmitted to any external server, cloud service, or third party.
+        .meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
 
-Stored data may include:
-- Text content you have copied to the clipboard
-- Image thumbnails of copied images
-- Metadata such as the source application name and timestamps
+        .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-This data is stored within the App's sandboxed container and is only accessible to ReClip.
+        .meta .dot {
+            width: 4px;
+            height: 4px;
+            background: var(--text-secondary);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
 
-## Network Access
+        section {
+            margin-bottom: 40px;
+        }
 
-ReClip has **no network access whatsoever**. The App does not connect to the internet, does not make any HTTP requests, and does not communicate with any servers. There are no APIs, no cloud synchronization, and no remote services involved in the operation of the App.
+        h2 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
 
-## Third-Party Services
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
 
-ReClip does not integrate with or use any third-party services, SDKs, analytics platforms, or advertising networks.
+        p:last-child {
+            margin-bottom: 0;
+        }
 
-## Privacy Exclusions
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
 
-ReClip includes a built-in feature that allows you to exclude specific applications from clipboard monitoring. When an app is added to the exclusion list, ReClip will not capture any clipboard content originating from that application. This feature is designed to protect sensitive data from password managers, banking apps, and other security-sensitive software.
+        ul {
+            list-style: none;
+            margin: 16px 0;
+            padding: 0;
+        }
 
-## Data Deletion
+        ul li {
+            padding: 8px 0 8px 24px;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
 
-You can delete your clipboard history at any time from within the App using the "Clear History" function. Uninstalling ReClip will remove all stored clipboard data along with the App.
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.3;
+        }
 
-## Children's Privacy
+        .highlight-box {
+            background: var(--highlight);
+            border-left: 3px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
 
-ReClip does not knowingly collect any data from children or any other users. Since the App collects no data at all, it is safe for users of all ages.
+        .highlight-box p {
+            color: var(--text);
+            font-weight: 500;
+            margin: 0;
+            font-size: 15px;
+        }
 
-## App Store Privacy Labels
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 16px;
+        }
 
-In accordance with Apple's App Store requirements, ReClip declares **"Data Not Collected"** as its privacy nutrition label. No data types are collected or linked to user identity.
+        .contact-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-## Changes to This Policy
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
 
-If this privacy policy is updated, the revised version will be posted at the URL below with an updated "Last Updated" date. Since ReClip collects no data, material changes to this policy are unlikely.
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            font-size: 15px;
+        }
 
----
+        .contact-row:not(:last-child) {
+            border-bottom: 1px solid var(--border);
+        }
 
-*This privacy policy applies to ReClip version 1.0 and later, available on the Mac App Store.*
+        .contact-row .label {
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 48px 20px 80px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .meta .dot {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="app-badge">
+                <div class="icon">R</div>
+                ReClip — Clipboard Manager
+            </div>
+            <h1>Privacy Policy</h1>
+            <div class="meta">
+                <span>Effective February 10, 2026</span>
+                <span class="dot"></span>
+                <span>Last updated February 10, 2026</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>ReClip ("the App") is a clipboard history manager for macOS developed by RafalTech. Your privacy is fundamental to how ReClip is built. The App is designed to operate entirely on your device with no data ever leaving your Mac.</p>
+        </section>
+
+        <section>
+            <h2>Data Collection</h2>
+            <div class="highlight-box">
+                <p>ReClip does not collect, transmit, or share any personal data.</p>
+            </div>
+            <p>Specifically:</p>
+            <ul>
+                <li>No personal information is collected</li>
+                <li>No usage analytics or telemetry is gathered</li>
+                <li>No crash reports are sent</li>
+                <li>No advertising identifiers are used</li>
+                <li>No cookies or tracking technologies are employed</li>
+                <li>No user accounts or registration is required</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data Storage</h2>
+            <p>All clipboard history captured by ReClip is stored <strong>locally on your Mac</strong> using Apple's SwiftData framework. This data resides exclusively on your device and is never transmitted to any external server, cloud service, or third party.</p>
+            <p>Stored data may include:</p>
+            <ul>
+                <li>Text content you have copied to the clipboard</li>
+                <li>Image thumbnails of copied images</li>
+                <li>Metadata such as the source application name and timestamps</li>
+            </ul>
+            <p>This data is stored within the App's sandboxed container and is only accessible to ReClip.</p>
+        </section>
+
+        <section>
+            <h2>Network Access</h2>
+            <p>ReClip has <strong>no network access whatsoever</strong>. The App does not connect to the internet, does not make any HTTP requests, and does not communicate with any servers. There are no APIs, no cloud synchronization, and no remote services involved in the operation of the App.</p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>ReClip does not integrate with or use any third-party services, SDKs, analytics platforms, or advertising networks.</p>
+        </section>
+
+        <section>
+            <h2>Privacy Exclusions</h2>
+            <p>ReClip includes a built-in feature that allows you to exclude specific applications from clipboard monitoring. When an app is added to the exclusion list, ReClip will not capture any clipboard content originating from that application. This feature is designed to protect sensitive data from password managers, banking apps, and other security-sensitive software.</p>
+        </section>
+
+        <section>
+            <h2>Data Deletion</h2>
+            <p>You can delete your clipboard history at any time from within the App using the "Clear History" function. Uninstalling ReClip will remove all stored clipboard data along with the App.</p>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>ReClip does not knowingly collect any data from children or any other users. Since the App collects no data at all, it is safe for users of all ages.</p>
+        </section>
+
+        <section>
+            <h2>App Store Privacy Labels</h2>
+            <p>In accordance with Apple's App Store requirements, ReClip declares <strong>"Data Not Collected"</strong> as its privacy nutrition label. No data types are collected or linked to user identity.</p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>If this privacy policy is updated, the revised version will be posted at this URL with an updated "Last Updated" date. Since ReClip collects no data, material changes to this policy are unlikely.</p>
+        </section>
+        <footer>
+            <p>This privacy policy applies to ReClip version 1.0 and later, available on the Mac App Store.</p>
+            <p>&copy; 2026 ReClip All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
